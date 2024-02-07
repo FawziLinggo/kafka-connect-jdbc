@@ -727,6 +727,7 @@
             <id>custom-jar</id>
             <build>
                 <plugins>
+                    <!-- Plugin untuk membuat JAR -->
                     <plugin>
                         <artifactId>maven-jar-plugin</artifactId>
                         <executions>
@@ -740,6 +741,8 @@
                                     <classifier>custom</classifier>
                                     <includes>
                                         <include>**/PhoenixDatabaseDialect.class</include>
+                                        <include>**/PhoenixDatabaseDialect$Provider.class</include>
+                                        <include>**/PhoenixDatabaseDialect$1.class</include>
                                     </includes>
                                 </configuration>
                             </execution>
@@ -754,7 +757,6 @@
                 </resources>
             </build>
         </profile>
-
 
         <profile>
         <id>licenses-source</id>
